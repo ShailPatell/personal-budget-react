@@ -44,13 +44,12 @@ function ChartJSPieChart() {
       });
     });
 
-    // Cleanup on unmount
     return () => {
       if (chartInstanceRef.current) {
         chartInstanceRef.current.destroy();
       }
     };
-  }, []); // <-- empty dependency array, only runs once
+  }, []); 
 
   return <canvas ref={chartRef}></canvas>;
 }
